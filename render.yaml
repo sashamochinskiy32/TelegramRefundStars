@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: telegram-bot-worker
+    env: python
+    plan: starter
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    autoDeploy: true
+    restartPolicy: always
